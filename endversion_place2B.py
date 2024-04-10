@@ -31,8 +31,8 @@ def find_communities_nearby_fixed(name_or_coords, radius_km, df):
     else:
         target_coords = name_or_coords
     df = df.dropna(subset=['N', 'E'])
-    df['Distance'] = df.apply(lambda row: haversine(target_coords[0], target_coords[1], row['N'], row['E']), axis=1)
-    nearby_communities = df[df['Distance'] <= radius_km]
+    df['Distanz in km'] = df.apply(lambda row: haversine(target_coords[0], target_coords[1], row['N'], row['E']), axis=1)
+    nearby_communities = df[df['Distanz in km'] <= radius_km]
     sorted_communities = nearby_communities.sort_values(by='Steuerfuss').reset_index(drop=True)
     return sorted_communities[['Gemeindename', 'BFS-Nr', 'Kantonskürzel', 'E', 'N', 'Steuerfuss', 'Distanz in km']]
 
