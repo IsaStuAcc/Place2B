@@ -8,7 +8,7 @@ st.set_page_config(page_title="Place2B", page_icon=":house:")
 # Title & Intro
 st.title("Place2B")
 st.write("""
-Find the ideal place to live that takes your desired commute into account and meets your tax requirements. :)
+Finden Sie den idealen Wohnort, der Ihrer gewünschten Entfernung und Ihren steuerlichen Anforderungen entspricht.
 """)
 
 # Haversine-Formel zur Berechnung der Distanz zwischen zwei Punkten auf der Erdoberfläche
@@ -34,7 +34,7 @@ def find_communities_nearby_fixed(name_or_coords, radius_km, df):
     df['Distance'] = df.apply(lambda row: haversine(target_coords[0], target_coords[1], row['N'], row['E']), axis=1)
     nearby_communities = df[df['Distance'] <= radius_km]
     sorted_communities = nearby_communities.sort_values(by='Steuerfuss').reset_index(drop=True)
-    return sorted_communities[['Gemeindename', 'BFS-Nr', 'Kantonskürzel', 'E', 'N', 'Steuerfuss', 'Distance']]
+    return sorted_communities[['Gemeindename', 'BFS-Nr', 'Kantonskürzel', 'E', 'N', 'Steuerfuss', 'Distanz in km']]
 
 # Laden der Daten
 file_path = 'C:\\Users\\maxim\\geo_daten_schweiz und estv_income_rates_schweiz.csv'  # Aktualisieren Sie diesen Pfad entsprechend und falls der Link nicht funktioniert 2 // einabuen und nicht nur 1 /
@@ -45,10 +45,10 @@ st.title('Suche nach Gemeinden')
 st.sidebar.header('Suchkriterien')
 
 # Eingabe für den Namen der Gemeinde
-gemeinde_name = st.sidebar.text_input('Gemeindename', 'Uzwil')
+gemeinde_name = st.sidebar.text_input('Gemeindename')
 
 # Eingabe für den Radius
-radius_km = st.sidebar.slider('Radius in Kilometer', min_value=1, max_value=100, value=10)
+radius_km = st.sidebar.slider('Radius in Kilometer', min_value=1, max_value=100, value=50)
 
 # Suchen-Button
 if st.sidebar.button('Suche starten'):
