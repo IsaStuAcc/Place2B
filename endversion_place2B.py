@@ -37,7 +37,7 @@ def find_communities_nearby_fixed(name_or_coords, radius_km, df):
     return sorted_communities[['Gemeindename', 'BFS-Nr', 'Kantonskürzel', 'E', 'N', 'Steuerfuss', 'Distance']]
 
 # Laden der Daten
-file_path = 'C:\\Users\\maxim\\geo_daten_schweiz und estv_income_rates_schweiz.csv'  # Aktualisieren Sie diesen Pfad entsprechend
+file_path = 'C:\\Users\\maxim\\geo_daten_schweiz und estv_income_rates_schweiz.csv'  # Aktualisieren Sie diesen Pfad entsprechend und falls der Link nicht funktioniert 2 // einabuen und nicht nur 1 /
 data = pd.read_csv(file_path, sep=';')
 
 # Streamlit UI-Elemente
