@@ -40,7 +40,7 @@ def find_communities_nearby_fixed(name_or_coords, radius_km, df):
     return sorted_communities
 
 # Laden der Daten  (Info an den Rest der Gruppe, dieser Pfad file_path aus Zeile 43 muss aktualisiert werden und die entsprechende Excel Datei dort auch Lokal abgelegt sein)
-file_path = 'C:\\Users\\maxim\\geo_daten_schweiz und estv_income_rates_schweiz.csv'  # Pfad aktualisieren
+file_path = 'geo_daten_schweiz und estv_income_rates_schweiz.csv'  # Pfad aktualisieren
 data = pd.read_csv(file_path, sep=';')
 
 # Streamlit UI-Elemente
