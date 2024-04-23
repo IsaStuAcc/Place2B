@@ -39,8 +39,8 @@ def find_communities_nearby_fixed(name_or_coords, radius_km, df):
     sorted_communities = nearby_communities.sort_values(by='Steuerfuss').reset_index(drop=True)
     return sorted_communities
 
-# Laden der Daten  (Info an den Rest der Gruppe, dieser Pfad file_path aus Zeile 43 muss aktualisiert werden und die entsprechende Excel Datei dort auch Lokal abgelegt sein)
-file_path = 'geo_daten_schweiz und estv_income_rates_schweiz.csv'  # Pfad aktualisieren
+# Laden der Daten  (die geo_daten_schweiz und estv_income_rates_schweiz.csv datei lokal speichern)
+file_path = 'geo_daten_schweiz und estv_income_rates_schweiz.csv' 
 data = pd.read_csv(file_path, sep=';')
 
 # Streamlit UI-Elemente
