@@ -9,7 +9,8 @@ import plotly.express as px
 st.set_page_config(page_title="Place2B", page_icon=":house:")
 
 # Title & Intro
-st.title("Place2B")
+logo_url = "Logo.png"
+st.image(logo_url, width=600)
 st.write("""
 Finden Sie den idealen Wohnort, der Ihrer gewünschten Entfernung und Ihren steuerlichen Anforderungen entspricht.
 """)
