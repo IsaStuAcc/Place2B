@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "place2b-testiva",
+  "private_key_id": "22af13cb66822f2352467c9fc13b4c4c7c63a454",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC/dUpuBOvXoBoy\nmZ4EEAdB9Kl/RV5DQPnfbOgyCr9KmruPaF42s98/+L5m+jH7d6XXUMjctQM0VN3U\n4jv5I1b8rXXzTRAzzxDXSXpIEaovHaROzOLXg6C6DzG19u++n8Otx1oHVXbH/ZNq\nC2BjO2/lfLjQwE8zyL6AQgO7sqplxA0CDJ29IFETfu0AefeyRwilBWF09Cr/H5iP\nQVXZwLWS+DMYMcJK9TfOBULxQYBDuxIL0qZ/cOTar/lzwd/GxkkTBP5chnTxwY5G\nhFT7/h2dTdMA1BPke1HKbt67/bsx10I4o32Q+haiiPzLTlnm2FOrb5AzMecMo7w3\nEJdg43DhAgMBAAECggEAPqT+jwQONPXeTIsmAFdMQKDwqsOERcYnXBsS2HjawWri\njthL52MwW4qkpiYcH5c1DMASkOCrZT6VfNfvXqPZDQEmtE6VTBZnAMI6gAVDpXnx\n7pSsbm7Tsr1Q+ySKqlk1GhG92+NzY5mNV+fUCHQEt1Z5VFhwMdXvuyCefxZFGdmc\no3ue09oqtTo0Sfqyv29GJztLxvbdI09TnKaWX7bVwuL8606eg5mZz5hS81M2urGI\nZyM0c/jGYcIqcAWUjI5M2qRULJ8Oi9YDrAZXY/XlZv094TyJ8V5p1ZR7gMCa/OGs\n49zdQU6xfRyDoiBI+A5xjhzX/wkYSrC9KtUqrIsCRwKBgQDkVr8Rc1vBAFz+cAli\n7nrZviHY12ZY/M/FnJH8uo58KKvk76xVm/sNyR2sEYzc5kqoVq/RhqqXd/JC4NaW\nTFSDsCmrMjhLqMIbfGKcA64iOiQFFi9QRT11NoDr3UFZZEDDlce8O2oRbKW+ZH7W\nI4CTJGFYAi+t49BvxAxuTp8RmwKBgQDWpsyP9yqccCtNpR+EWp7XHoET9nUKhGLz\nP1nEjSz9VrvuYqSAkHACNuCA3qQh+m/touAEkubm1bsN92LUshvYiTTdW7QVOuFJ\nO1GuDgHIDcdL8CRmn5buZVqtHhFI401BcJIwj9D9xO7VPbCfgnoPwXiZ0BF1a71N\nza2VXJM9MwKBgB2nQlMC1zSeVnVYmW92pw+mCIE/n/QIiPcR2Uen9p8bLQ+jLI9F\nnXnx11+kO9XoNmPcNiMQyRC4rAaRamzEZulfNFoeQH9a4DJvmeLG+5NIV6stcWGM\nTGnvdRiseDMiuOJtji3czW6L3I54QJyQqb7yJ44lYonDnysUm8Srgy7nAoGAR86c\n+DxTQOo1UlA+7uPx5z0JKUh1dwM6pu02do5T0pxFWkYdifTHw7Xf/Lx+Y++HqhOm\npWEPZYFyhgWQRl8e+Z1M1hBref6shvcVKAj/h5E0bq7zPnF86Ft3rho05hFEMvQZ\ns60o2PwcebGdeH8JnmO2mJ4GeSWFupVn0GObzgkCgYAuAXNCBn0QZMUmeCxYqSnj\njK87aw7sChpjhF87q/J5Zj4k18IYD6dsdJKBjVx1WGz0QvlYX4UZ5EidCWuxuPXN\nIsaTXkNBF5muRuvHpQ/BbXNlaJczHOFRqsEp/1ZMDqHb/vAY4nlMvf5ZYeVidhrx\nVErK5yar8UNf+3tPRjRP3Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "place2b-testiva@place2b-testiva.iam.gserviceaccount.com",
+  "client_id": "115149678600191537637",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/place2b-testiva%40place2b-testiva.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
