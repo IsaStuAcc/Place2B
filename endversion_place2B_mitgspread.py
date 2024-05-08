@@ -81,7 +81,7 @@ def find_communities_nearby_fixed(name_or_coords, radius_km, df):
 scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive', 'https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive.file']
 creds = ServiceAccountCredentials.from_json_keyfile_name("place2b-testiva-22af13cb6682.json", scope)
 client = gspread.authorize(creds)
-sheet = client.open("geo_daten_schweiz und estv_income_rates_schweiz").sheet1
+sheet = client.open("geo_daten_schweiz_und_estv_income_rates_schweiz").sheet1
 
 data = sheet.get_all_records()
 data_base = pd.DataFrame(data)
