@@ -30,6 +30,15 @@ def haversine(lat1, lon1, lat2, lon2):
     # 'sin(dLon / 2)**2' ist das Quadrat des Sinus der halben Differenz der Längengrade.
     a = math.sin(dLat / 2) ** 2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dLon / 2) ** 2
 
+    # Begrenzung des Wertes von 'a' auf den Bereich von 0 bis 1, weil sonst c nicht berechnet werden kann, weil die Wurzelwerte negativ werden können
+    # Quelle: https://stackoverflow.com/questions/49085694/haversines-formula-and-python-3-math-domain-error
+    if a < 0:
+        a = 0
+    elif a > 1:
+        a = 1
+    else:
+        a = a
+    
     # Berechnung des zentralen Winkels, den die beiden Punkte auf der Erdoberfläche bilden,
     # basierend auf dem Haversine 'a'
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
