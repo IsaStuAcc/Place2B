@@ -73,8 +73,8 @@ def find_communities_nearby_fixed(name_or_coords, radius_km, df):
     # Filtern der Gemeinden, die innerhalb des gegebenen Radius liegen
     nearby_communities = df[df['Distanz in km'] <= radius_km]
 
-    # Sortieren der gefundenen Gemeinden nach 'Steuerfuss' und Zurücksetzen des Index für das Ergebnis-DataFrame
-    sorted_communities = nearby_communities.sort_values(by='Steuerfuss').reset_index(drop=True)
+    # Sortieren der gefundenen Gemeinden nach 'Steuerfuss-Gemeinde' und Zurücksetzen des Index für das Ergebnis-DataFrame
+    sorted_communities = nearby_communities.sort_values(by='Steuerfuss-Gemeinde').reset_index(drop=True)
     return sorted_communities
 
 # Laden der Daten  (die "geo_daten_schweiz und estv_income_rates_schweiz.csv" datei lokal speichern)
@@ -104,8 +104,8 @@ if st.sidebar.button('Suche starten'):
     result_df = find_communities_nearby_fixed(gemeinde_name, radius_km, data_base)
     if result_df is not None and not result_df.empty:
         # Erstellung des Balkendiagramms
-        fig_bar = px.bar(result_df, x='Steuerfuss', y='Gemeindename', orientation='h', color='Distanz in km',
-                         labels={'Steuerfuss':'Steuerfuss [%]', 'Gemeindename':'Gemeinde'},
+        fig_bar = px.bar(result_df, x='Steuerfuss-Gemeinde', y='Gemeindename', orientation='h', color='Distanz in km',
+                         labels={'Steuerfuss-Gemeinde':'Steuerfuss [%]', 'Gemeindename':'Gemeinde'},
                          title='Steuerfuss und Distanz der Gemeinden')
         st.plotly_chart(fig_bar, use_container_width=True)
 
@@ -113,7 +113,7 @@ if st.sidebar.button('Suche starten'):
         fig = go.Figure(go.Scattergeo(
             lon = result_df['E'],
             lat = result_df['N'],
-            text = result_df['Gemeindename'] + '<br>Steuerfuss: ' + result_df['Steuerfuss'].astype(str) + '%<br>Distanz: ' + result_df['Distanz in km'].astype(str) + ' km',
+            text = result_df['Gemeindename'] + '<br>Steuerfuss-Gemeinde: ' + result_df['Steuerfuss-Gemeinde'].astype(str) + '%<br>Distanz: ' + result_df['Distanz in km'].astype(str) + ' km',
             mode = 'markers',
             marker=dict(
                 size=10,
