@@ -93,10 +93,10 @@ st.title('Suche nach Gemeinden')
 st.sidebar.header('Suchkriterien')
 
 # Eingabe für den Namen der Gemeinde
-gemeinde_name = st.sidebar.text_input('Gemeindename')
+gemeinde_name = st.sidebar.text_input('Gemeindename Ihres Arbeitsortes')
 
 # Eingabe für den Radius
-radius_km = st.sidebar.slider('Radius in Kilometer', min_value=1, max_value=100, value=50)
+radius_km = st.sidebar.slider('Radius in Kilometer des gewünschten Arbeitswegs', min_value=1, max_value=100, value=50)
 
 # Suchen-Button
 if st.sidebar.button('Suche starten'):
